@@ -12,6 +12,7 @@
 		5B6BBA5E1D287C3200656511 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6BBA5C1D287C3200656511 /* Main.storyboard */; };
 		5B6BBA601D287C3200656511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B6BBA5F1D287C3200656511 /* Assets.xcassets */; };
 		5B6BBA631D287C3200656511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6BBA611D287C3200656511 /* LaunchScreen.storyboard */; };
+		5B6BBA6B1D287CCD00656511 /* MyCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6BBA6A1D287CCD00656511 /* MyCustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5B6BBA5F1D287C3200656511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B6BBA621D287C3200656511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B6BBA641D287C3200656511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B6BBA6A1D287CCD00656511 /* MyCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				5B6BBA5F1D287C3200656511 /* Assets.xcassets */,
 				5B6BBA611D287C3200656511 /* LaunchScreen.storyboard */,
 				5B6BBA641D287C3200656511 /* Info.plist */,
+				5B6BBA6A1D287CCD00656511 /* MyCustomTableViewCell.swift */,
 			);
 			path = SampleTargetButton;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			files = (
 				5B6BBA5B1D287C3200656511 /* ViewController.swift in Sources */,
 				5B6BBA591D287C3200656511 /* AppDelegate.swift in Sources */,
+				5B6BBA6B1D287CCD00656511 /* MyCustomTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,18 +8,36 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource{
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet var yourTbl: UITableView!
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
     }
-
-
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cellIdentifier", forIndexPath: indexPath) as! MyCustomTableViewCell
+        
+        cell.myBtn.addTarget(self, action: "myActionMethod:", forControlEvents: .TouchUpInside)
+        cell.myBtn.setTitle("Button \(indexPath.row)", forState: .Normal)
+        
+        return cell
+    }
+    
+    //MARK: myActionMethod
+    
+    func myActionMethod(sender:UIButton){
+        if let tableViewCell = sender.superview?.superview as? UITableViewCell, indexPath = yourTbl.indexPathForCell(tableViewCell){
+            let alert = UIAlertController(title: "Touch", message: "The button with section \(indexPath.section) and row \(indexPath.row) was tapped", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
 }
 
